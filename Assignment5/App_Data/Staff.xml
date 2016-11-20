@@ -1,1 +1,55 @@
-<Staffers></Staffers>
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Staffers>
+  <Staff>
+    <UserName>admin</UserName>
+    <Password>password</Password>
+  </Staff>
+  <Staff>
+    <UserName>admin</UserName>
+    <Password>password</Password>
+  </Staff>
+  <Staff>
+    <UserName>admin</UserName>
+    <Password>password</Password>
+  </Staff>
+  <Staff>
+    <UserName>admin</UserName>
+    <Password>password</Password>
+  </Staff>
+  <Staff>
+    <UserName>TA</UserName>
+    <Password>CSE445598ta!</Password>
+  </Staff>
+  <Staff>
+    <UserName>admin</UserName>
+    <Password>password</Password>
+  </Staff>
+  <Staff>
+    <UserName>TA</UserName>
+    <Password>CSE445598ta!</Password>
+  </Staff>
+  <Staff>
+    <UserName>admin</UserName>
+    <Password>password</Password>
+  </Staff>
+  <Staff>
+    <UserName>TA</UserName>
+    <Password>CSE445598ta!</Password>
+  </Staff>
+  <Staff>
+    <UserName>admin</UserName>
+    <Password>password</Password>
+  </Staff>
+  <Staff>
+    <UserName>TA</UserName>
+    <Password>CSE445598ta!</Password>
+  </Staff>
+  <Staff>
+    <UserName>admin</UserName>
+    <Password>password</Password>
+  </Staff>
+  <Staff>
+    <UserName>TA</UserName>
+    <Password>CSE445598ta!</Password>
+  </Staff>
+</Staffers>
