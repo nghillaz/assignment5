@@ -14,7 +14,7 @@
         </div>
         <div class="col-md-4">
             <h2>Staff Login Landing</h2>
-                 <asp:Button ID="StaffPageButton" runat="server" Text="Staff Page" /> 
+                 <asp:Button ID="StaffPageButton" runat="server" Text="Staff Page" OnClick="StaffPageButton_Click" /> 
                  <asp:Button ID="StaffLoginButton" runat="server" Text="Staff Login" OnClick="StaffLoginButton_Click"/> 
         </div>
         <div class="col-md-4">

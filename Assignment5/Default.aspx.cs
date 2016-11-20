@@ -28,5 +28,10 @@ namespace Assignment5
         {
             Response.Redirect("StaffLogin");
         }
+
+        protected void StaffPageButton_Click(object sender, EventArgs e)
+        {
+            Response.Redirect("Staff/Staff");
+        }
     }
 }

@@ -7,6 +7,10 @@ using System.Web.Optimization;
 using System.Web.Routing;
 using System.Web.Security;
 using System.Web.SessionState;
+using System.Text;
+using System.Xml;
+using System.Xml.Linq;
+using System.Xml.Serialization;
 
 //WRITTEN BY NATHAN HILL
 
@@ -25,6 +29,35 @@ namespace Assignment5
             {
                 File.WriteAllText(Server.MapPath("~/App_Data/Member.xml"), "<Members></Members>");
             }
+
+            //Zarate started writing here!
+            //We also need to create an XML file for Staff
+            if(!File.Exists(Server.MapPath("~/App_Data/Staff.xml")))
+            {
+                File.WriteAllText(Server.MapPath("~/App_Data/Staff.xml"), "<Staffers></Staffers>");
+                
+            }
+            initStaffCredintials();
+        }
+
+        //Author: Zarate
+        void initStaffCredintials()
+        {
+            //get the file location first
+            string fileLocation = Path.Combine(HttpRuntime.AppDomainAppPath, @"App_Data");
+            fileLocation = Path.Combine(fileLocation, "Staff.xml");
+
+            //load the file
+            XDocument doc = XDocument.Load(fileLocation);
+            //write to the file and save
+            XElement newStaff = doc.Element("Staffers");
+            newStaff.Add(new XElement("Staff",
+                         new XElement("UserName", "admin"),
+                         new XElement("Password", "password")));
+            newStaff.Add(new XElement("Staff",
+                         new XElement("UserName", "TA"),
+                         new XElement("Password", "CSE445598ta!")));
+            doc.Save(fileLocation);
         }
     }
 }
