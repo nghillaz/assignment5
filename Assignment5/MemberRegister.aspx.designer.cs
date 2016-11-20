@@ -31,6 +31,33 @@ namespace Assignment5.Member {
         protected global::System.Web.UI.WebControls.TextBox PasswordTextBox;
         
         /// <summary>
+        /// ImageVerifierImage control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Image ImageVerifierImage;
+        
+        /// <summary>
+        /// ReloadVerification control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Button ReloadVerification;
+        
+        /// <summary>
+        /// ImageVerifierTextBox control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox ImageVerifierTextBox;
+        
+        /// <summary>
         /// Button1 control.
         /// </summary>
         /// <remarks>

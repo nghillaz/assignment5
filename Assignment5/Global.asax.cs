@@ -20,6 +20,7 @@ namespace Assignment5
             RouteConfig.RegisterRoutes(RouteTable.Routes);
             BundleConfig.RegisterBundles(BundleTable.Bundles);
 
+            //generate the members xml file with no members
             if (!File.Exists(Server.MapPath("~/App_Data/Member.xml")))
             {
                 File.WriteAllText(Server.MapPath("~/App_Data/Member.xml"), "<Members></Members>");

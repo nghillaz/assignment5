@@ -10,6 +10,7 @@ namespace Library
 {
     public class ExtraFunctions
     {
+        //hash function for passwords
         public static int HashFunction(String input)
         {
             char[] inputFormatted = input.ToCharArray();

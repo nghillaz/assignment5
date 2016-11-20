@@ -15,36 +15,41 @@ namespace Assignment5.Member
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-
+            //if they registered or logged in recently, remember their name
+            if (Request.Cookies["UserData"] != null && Request.Cookies["UserData"]["Username"] != null)
+            {
+                UsernameTextBox.Text = Request.Cookies["UserData"]["Username"];
+            }
         }
 
         protected void LoginButtonClick(object sender, EventArgs e)
         {
+            //check for empty text boxes
+            if (UsernameTextBox.Text.Length == 0)
             {
-                if (UsernameTextBox.Text.Length == 0)
-                {
-                    StatusLabel.Text = "Enter a username";
-                    StatusLabel.ForeColor = System.Drawing.Color.Red;
-                    return;
-                }
-                if (PasswordTextBox.Text.Length == 0)
-                {
-                    StatusLabel.Text = "Enter a password";
-                    StatusLabel.ForeColor = System.Drawing.Color.Red;
-                    return;
-                }
+                StatusLabel.Text = "Enter a username";
+                StatusLabel.ForeColor = System.Drawing.Color.Red;
+                return;
+            }
+            if (PasswordTextBox.Text.Length == 0)
+            {
+                StatusLabel.Text = "Enter a password";
+                StatusLabel.ForeColor = System.Drawing.Color.Red;
+                return;
+            }
 
-                XmlDocument membersXML = new XmlDocument();
-                membersXML.Load(Server.MapPath("~/App_Data/Member.xml"));
-                XmlNodeList membersList = membersXML.SelectNodes("Members/Member");
-                for (int i = 0; i < membersList.Count; i++)
+            //open the xml document and check if user exists
+            //if so, sign them in and start their session
+            XmlDocument membersXML = new XmlDocument();
+            membersXML.Load(Server.MapPath("~/App_Data/Member.xml"));
+            XmlNodeList membersList = membersXML.SelectNodes("Members/Member");
+            for (int i = 0; i < membersList.Count; i++)
+            {
+                if (membersList.Item(i).FirstChild.InnerText == UsernameTextBox.Text && membersList.Item(i).LastChild.InnerText == ExtraFunctions.HashFunction(PasswordTextBox.Text).ToString())
                 {
-                    if (membersList.Item(i).FirstChild.InnerText == UsernameTextBox.Text && membersList.Item(i).LastChild.InnerText == ExtraFunctions.HashFunction(PasswordTextBox.Text).ToString())
-                    {
-                        Session["Username"] = UsernameTextBox.Text;
-                        Session["Sid"] = Session.SessionID;
-                        Response.Redirect("Member/Member");
-                    }
+                    Session["Username"] = UsernameTextBox.Text;
+                    Session["Sid"] = Session.SessionID;
+                    Response.Redirect("Member/Member");
                 }
             }
         }
