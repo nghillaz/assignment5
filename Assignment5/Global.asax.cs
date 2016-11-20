@@ -26,16 +26,16 @@ namespace Assignment5
             BundleConfig.RegisterBundles(BundleTable.Bundles);
 
             //generate the members xml file with no members
-            if (!File.Exists(Server.MapPath("~/App_Data/Member.xml")))
+            if (!File.Exists(Server.MapPath("App_Data/Member.xml")))
             {
-                File.WriteAllText(Server.MapPath("~/App_Data/Member.xml"), "<Members></Members>");
+                File.WriteAllText(Server.MapPath("App_Data/Member.xml"), "<Members></Members>");
             }
 
             //Zarate started writing here!
             //We also need to create an XML file for Staff
-            if(!File.Exists(Server.MapPath("~/App_Data/Staff.xml")))
+            if(!File.Exists(Server.MapPath("App_Data/Staff.xml")))
             {
-                File.WriteAllText(Server.MapPath("~/App_Data/Staff.xml"), "<Staffers></Staffers>");
+                File.WriteAllText(Server.MapPath("App_Data/Staff.xml"), "<Staffers></Staffers>");
                 initStaffCredintials();
             }
            
