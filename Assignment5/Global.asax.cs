@@ -11,6 +11,7 @@ using System.Text;
 using System.Xml;
 using System.Xml.Linq;
 using System.Xml.Serialization;
+using Library;
 
 //WRITTEN BY NATHAN HILL
 
@@ -47,16 +48,21 @@ namespace Assignment5
             string fileLocation = Path.Combine(HttpRuntime.AppDomainAppPath, @"App_Data");
             fileLocation = Path.Combine(fileLocation, "Staff.xml");
 
+
+            string adminPassword = ZarateHash.HashFunction("password").ToString();
+            string taPassword = ZarateHash.HashFunction("CSE445598ta!").ToString();
+
+
             //load the file
             XDocument doc = XDocument.Load(fileLocation);
             //write to the file and save
             XElement newStaff = doc.Element("Staffers");
             newStaff.Add(new XElement("Staff",
                          new XElement("UserName", "admin"),
-                         new XElement("Password", "password")));
+                         new XElement("Password", adminPassword)));
             newStaff.Add(new XElement("Staff",
                          new XElement("UserName", "TA"),
-                         new XElement("Password", "CSE445598ta!")));
+                         new XElement("Password", taPassword)));
             doc.Save(fileLocation);
         }
     }

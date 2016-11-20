@@ -9,7 +9,25 @@ namespace Library
 {
     public class ZarateHash
     {
-        private string PasswordSalt
+        public static int HashFunction(string input)
+        {
+            char[] inputFormatted = input.ToCharArray();
+            int returnValue = 0;
+            for (int i = 0; i < input.Length; i++)
+            {
+                //arbitrary hash function
+                returnValue += inputFormatted[i] * i * (5 * i);
+            }
+
+            return returnValue;
+        }
+
+    }
+}
+
+
+        /*
+        public string PasswordSalt
         {
             get
             {
@@ -22,6 +40,8 @@ namespace Library
 
         public string EncodePassword(string password, string salt)
         {
+           
+
             byte[] bytes = Encoding.Unicode.GetBytes(password);
             byte[] src = Encoding.Unicode.GetBytes(salt);
             byte[] dst = new byte[src.Length + bytes.Length];
@@ -34,5 +54,5 @@ namespace Library
 
     }
 
-    
-}
+    */
+

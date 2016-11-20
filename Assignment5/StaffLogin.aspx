@@ -22,8 +22,9 @@
                 </tr>
             </table>
             <asp:Label ID="Output" runat="server" />
+            
             <br />
-            <asp:Button ID="LoginButton" runat="server" Text="Login" OnClick="LoginFunction" />         
+            <asp:Button ID="LoginButton" runat="server" Text="Login" OnClick="LoginButton_Click" />
             
         </div>
     </div>
