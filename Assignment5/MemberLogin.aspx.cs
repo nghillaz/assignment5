@@ -7,6 +7,8 @@ using System.Web.UI;
 using System.Web.UI.WebControls;
 using System.Xml;
 
+//WRITTEN BY NATHAN HILL
+
 namespace Assignment5.Member
 {
     public partial class MemberLogin : System.Web.UI.Page

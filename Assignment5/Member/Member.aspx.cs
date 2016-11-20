@@ -5,6 +5,8 @@ using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
 
+//WRITTEN BY NATHAN HILL
+
 namespace Assignment5.Member
 {
     public partial class Member : System.Web.UI.Page

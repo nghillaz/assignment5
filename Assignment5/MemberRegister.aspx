@@ -1,5 +1,6 @@
 ﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="MemberRegister.aspx.cs" Inherits="Assignment5.Member.MemberRegister" %>
 <asp:Content ID="Content1" ContentPlaceHolderID="MainContent" runat="server">
+    <%-- WRITTEN BY NATHAN HILL --%>
     <h1>Member Registration</h1>
     <h2>Username: <asp:TextBox ID="UsernameTextBox" runat="server"></asp:TextBox></h2>
     <h2>Password: <asp:TextBox ID="PasswordTextBox" runat="server"></asp:TextBox></h2>

@@ -4,6 +4,8 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
+//WRITTEN BY NATHAN HILL
+
 namespace Library
 {
     public class ExtraFunctions

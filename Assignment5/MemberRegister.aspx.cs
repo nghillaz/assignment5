@@ -8,6 +8,8 @@ using System.Web.UI.WebControls;
 using System.Xml;
 using Library;
 
+//WRITTEN BY NATHAN HILL
+
 namespace Assignment5.Member
 {
     public partial class MemberRegister : System.Web.UI.Page
