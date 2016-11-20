@@ -11,6 +11,14 @@ namespace Assignment5
     {
         protected void Page_Load(object sender, EventArgs e)
         {
+            if (Request.Cookies["UserData"] != null && Request.Cookies["UserData"]["Username"] != null)
+            {
+                StaffUserNameTextBox.Text = Request.Cookies["UserData"]["Username"];
+            }
+        }
+
+        protected void LoginButton_Click(object sender, EventArgs e)
+        {
 
         }
     }
