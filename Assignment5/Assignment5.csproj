@@ -210,8 +210,8 @@
     <Content Include="ApplicationInsights.config">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
-    <Content Include="Member\MemberLogin.aspx" />
-    <Content Include="Member\MemberRegister.aspx" />
+    <Content Include="MemberLogin.aspx" />
+    <Content Include="MemberRegister.aspx" />
     <Content Include="Member\Web.config" />
     <None Include="Member\Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
@@ -254,6 +254,7 @@
     <Content Include="favicon.ico" />
     <Content Include="Global.asax" />
     <Content Include="Site.Master" />
+    <Content Include="StaffLogin.aspx" />
     <Content Include="Staff\Staff.aspx" />
     <Content Include="ViewSwitcher.ascx" />
     <Content Include="Web.config" />
@@ -410,26 +411,26 @@
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
+    <Compile Include="MemberLogin.aspx.cs">
+      <DependentUpon>MemberLogin.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="MemberLogin.aspx.designer.cs">
+      <DependentUpon>MemberLogin.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="MemberRegister.aspx.cs">
+      <DependentUpon>MemberRegister.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="MemberRegister.aspx.designer.cs">
+      <DependentUpon>MemberRegister.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Member\Member.aspx.cs">
       <DependentUpon>Member.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="Member\Member.aspx.designer.cs">
       <DependentUpon>Member.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="Member\MemberLogin.aspx.cs">
-      <DependentUpon>MemberLogin.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="Member\MemberLogin.aspx.designer.cs">
-      <DependentUpon>MemberLogin.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="Member\MemberRegister.aspx.cs">
-      <DependentUpon>MemberRegister.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="Member\MemberRegister.aspx.designer.cs">
-      <DependentUpon>MemberRegister.aspx</DependentUpon>
     </Compile>
     <Compile Include="Models\IdentityModels.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -446,6 +447,13 @@
     </Compile>
     <Compile Include="Site.Mobile.Master.designer.cs">
       <DependentUpon>Site.Mobile.Master</DependentUpon>
+    </Compile>
+    <Compile Include="StaffLogin.aspx.cs">
+      <DependentUpon>StaffLogin.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="StaffLogin.aspx.designer.cs">
+      <DependentUpon>StaffLogin.aspx</DependentUpon>
     </Compile>
     <Compile Include="Staff\Staff.aspx.cs">
       <DependentUpon>Staff.aspx</DependentUpon>
