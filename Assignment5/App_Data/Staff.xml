@@ -52,4 +52,28 @@
     <UserName>TA</UserName>
     <Password>CSE445598ta!</Password>
   </Staff>
+  <Staff>
+    <UserName>admin</UserName>
+    <Password>password</Password>
+  </Staff>
+  <Staff>
+    <UserName>TA</UserName>
+    <Password>CSE445598ta!</Password>
+  </Staff>
+  <Staff>
+    <UserName>admin</UserName>
+    <Password>password</Password>
+  </Staff>
+  <Staff>
+    <UserName>TA</UserName>
+    <Password>CSE445598ta!</Password>
+  </Staff>
+  <Staff>
+    <UserName>admin</UserName>
+    <Password>password</Password>
+  </Staff>
+  <Staff>
+    <UserName>TA</UserName>
+    <Password>CSE445598ta!</Password>
+  </Staff>
 </Staffers>
