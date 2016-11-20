@@ -35,9 +35,9 @@ namespace Assignment5
             if(!File.Exists(Server.MapPath("~/App_Data/Staff.xml")))
             {
                 File.WriteAllText(Server.MapPath("~/App_Data/Staff.xml"), "<Staffers></Staffers>");
-                
+                initStaffCredintials();
             }
-            initStaffCredintials();
+           
         }
 
         //Author: Zarate
