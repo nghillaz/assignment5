@@ -14,9 +14,12 @@ namespace Assignment5
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-            if (Request.Cookies["UserData"] != null && Request.Cookies["UserData"]["Username"] != null)
+            if (!IsPostBack)
             {
-                StaffUserNameTextBox.Text = Request.Cookies["UserData"]["Username"];
+                if (Request.Cookies["UserData"] != null && Request.Cookies["UserData"]["Username"] != null)
+                {
+                    StaffUserNameTextBox.Text = Request.Cookies["UserData"]["Username"];
+                }
             }
         }
 
@@ -48,6 +51,7 @@ namespace Assignment5
                 {
                     Session["Username"] = StaffUserNameTextBox.Text;
                     Session["Sid"] = Session.SessionID;
+                    Session["isAdmin"] = "true";
                     Response.Redirect("Staff/Staff");
                 }
                 else

@@ -22,7 +22,7 @@ namespace Assignment5.Member
             //also display their username at the top of the page
             else
             {
-                UserNameLabel.Text = Session["Username"].ToString();
+                UserNameLabel.Text = "Welcome back, " + Session["Username"].ToString();
             }
         }
     }

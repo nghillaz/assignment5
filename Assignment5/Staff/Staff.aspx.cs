@@ -11,7 +11,17 @@ namespace Assignment5.Staff
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-
+            //user has no session, needs to login, send them to that page
+            if (Session["Sid"] == null || Session["isAdmin"] == null || Session["isAdmin"] != "true")
+            {
+                Response.Redirect("~/StaffLogin");
+            }
+            //if the user has a session, they've successfully logged in and should be allowed on the page
+            //also display their username at the top of the page
+            else
+            {
+                UserNameLabel.Text = "Welcome back, " + Session["Username"].ToString();
+            }
         }
     }
 }

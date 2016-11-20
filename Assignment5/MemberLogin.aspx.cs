@@ -15,10 +15,13 @@ namespace Assignment5.Member
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-            //if they registered or logged in recently, remember their name
-            if (Request.Cookies["UserData"] != null && Request.Cookies["UserData"]["Username"] != null)
+            if (!IsPostBack)
             {
-                UsernameTextBox.Text = Request.Cookies["UserData"]["Username"];
+                //if they registered or logged in recently, remember their name
+                if (Request.Cookies["UserData"] != null && Request.Cookies["UserData"]["Username"] != null)
+                {
+                    UsernameTextBox.Text = Request.Cookies["UserData"]["Username"];
+                }
             }
         }
 
