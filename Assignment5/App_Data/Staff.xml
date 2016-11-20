@@ -2,54 +2,10 @@
 <Staffers>
   <Staff>
     <UserName>admin</UserName>
-    <Password>password</Password>
-  </Staff>
-  <Staff>
-    <UserName>admin</UserName>
-    <Password>password</Password>
-  </Staff>
-  <Staff>
-    <UserName>admin</UserName>
-    <Password>password</Password>
-  </Staff>
-  <Staff>
-    <UserName>admin</UserName>
-    <Password>password</Password>
+    <Password>76375</Password>
   </Staff>
   <Staff>
     <UserName>TA</UserName>
-    <Password>CSE445598ta!</Password>
-  </Staff>
-  <Staff>
-    <UserName>admin</UserName>
-    <Password>password</Password>
-  </Staff>
-  <Staff>
-    <UserName>TA</UserName>
-    <Password>CSE445598ta!</Password>
-  </Staff>
-  <Staff>
-    <UserName>admin</UserName>
-    <Password>password</Password>
-  </Staff>
-  <Staff>
-    <UserName>TA</UserName>
-    <Password>CSE445598ta!</Password>
-  </Staff>
-  <Staff>
-    <UserName>admin</UserName>
-    <Password>password</Password>
-  </Staff>
-  <Staff>
-    <UserName>TA</UserName>
-    <Password>CSE445598ta!</Password>
-  </Staff>
-  <Staff>
-    <UserName>admin</UserName>
-    <Password>password</Password>
-  </Staff>
-  <Staff>
-    <UserName>TA</UserName>
-    <Password>CSE445598ta!</Password>
+    <Password>171790</Password>
   </Staff>
 </Staffers>

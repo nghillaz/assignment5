@@ -22,52 +22,11 @@
                 </tr>
             </table>
             <asp:Label ID="Output" runat="server" />
+            
             <br />
-            <asp:Button ID="LoginButton" runat="server" Text="Login" OnClick="LoginFunction" />         
+            <asp:Button ID="LoginButton" runat="server" Text="Login" OnClick="LoginButton_Click" />
             
         </div>
     </div>
 </asp:Content>
-
-
-<script language ="C#" runat="server">
-    void LoginFunction(Object sender, EventArgs e)
-    {
-
-        //striaght from the book page 313 i hope to god this shit is right
-        if (CustomAuthentication(StaffPasswordTextBox.Text, StaffPasswordTextBox.Text))
-            FormsAuthentication.RedirectFromLoginPage(StaffPasswordTextBox.Text, false);
-        else
-            Output.Text = "Invalid login";
-    }
-
-    bool CustomAuthentication(string userName, string password)
-    {
-        string fileLocation = System.IO.Path.Combine(HttpRuntime.AppDomainAppPath, "App_Data/Staff.xml");
-
-        if (System.IO.File.Exists(fileLocation))
-        {
-            System.Xml.XmlDocument StaffDoc = new System.Xml.XmlDocument();
-            StaffDoc.Load(Server.MapPath("~/App_Data/Staff.xml"));
-            System.Xml.XmlNodeList staffList = StaffDoc.SelectNodes("Staffers/Staff");
-
-            //loop and try to find a maching set
-            for(int i = 0; i <staffList.Count; i++)
-            {
-                if((staffList.Item(i).FirstChild.InnerText == userName) && (staffList.Item(i).LastChild.InnerText == password))
-                {
-                    return true;
-                }
-            }
-
-        }
-        return false;
-
-    }
-
-
-
-
-</script>
-
 
