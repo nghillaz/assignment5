@@ -9,8 +9,8 @@
     <div class="row">
         <div class="col-md-4">
             <h2>Member Login Landing</h2>
-                <asp:Button ID="MemberRegisterButton" runat="server" Text="Member Registration" />  
-                <asp:Button ID="MemberLoginButton" runat="server" Text="Member Login" />           
+                <asp:Button ID="MemberRegisterButton" runat="server" OnClick="MemberRegisterButtonClick" Text="Member Registration" />  
+                <asp:Button ID="MemberLoginButton" runat="server" OnClick="MemberLoginButtonClick" Text="Member Login" />           
         </div>
         <div class="col-md-4">
             <h2>Staff Login Landing</h2>

@@ -210,6 +210,8 @@
     <Content Include="ApplicationInsights.config">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
+    <Content Include="Member\MemberLogin.aspx" />
+    <Content Include="Member\MemberRegister.aspx" />
     <Content Include="Member\Web.config" />
     <None Include="Member\Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
@@ -414,6 +416,20 @@
     </Compile>
     <Compile Include="Member\Member.aspx.designer.cs">
       <DependentUpon>Member.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Member\MemberLogin.aspx.cs">
+      <DependentUpon>MemberLogin.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Member\MemberLogin.aspx.designer.cs">
+      <DependentUpon>MemberLogin.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Member\MemberRegister.aspx.cs">
+      <DependentUpon>MemberRegister.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Member\MemberRegister.aspx.designer.cs">
+      <DependentUpon>MemberRegister.aspx</DependentUpon>
     </Compile>
     <Compile Include="Models\IdentityModels.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

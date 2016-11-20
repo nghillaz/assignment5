@@ -13,5 +13,15 @@ namespace Assignment5
         {
 
         }
+
+        protected void MemberRegisterButtonClick(object sender, EventArgs e)
+        {
+            Response.Redirect("Member/MemberRegister");
+        }
+
+        protected void MemberLoginButtonClick(object sender, EventArgs e)
+        {
+            Response.Redirect("Member/MemberLogin");
+        }
     }
 }
