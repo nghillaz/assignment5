@@ -11,7 +11,14 @@ namespace Assignment5.Member
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-
+            if(Session["Sid"] == null)
+            {
+                Response.Redirect("~/MemberLogin");
+            }
+            else
+            {
+                UserNameLabel.Text = Session["Username"].ToString();
+            }
         }
     }
 }

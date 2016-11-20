@@ -16,12 +16,12 @@ namespace Assignment5
 
         protected void MemberRegisterButtonClick(object sender, EventArgs e)
         {
-            Response.Redirect("Member/MemberRegister");
+            Response.Redirect("MemberRegister");
         }
 
         protected void MemberLoginButtonClick(object sender, EventArgs e)
         {
-            Response.Redirect("Member/MemberLogin");
+            Response.Redirect("MemberLogin");
         }
     }
 }
