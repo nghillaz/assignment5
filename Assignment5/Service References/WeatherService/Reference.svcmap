@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="b4cf7e96-9308-4360-a235-29232aeb834e" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
+  <ClientOptions>
+    <GenerateAsynchronousMethods>false</GenerateAsynchronousMethods>
+    <GenerateTaskBasedAsynchronousMethod>true</GenerateTaskBasedAsynchronousMethod>
+    <EnableDataBinding>true</EnableDataBinding>
+    <ExcludedTypes />
+    <ImportXmlTypes>false</ImportXmlTypes>
+    <GenerateInternalTypes>false</GenerateInternalTypes>
+    <GenerateMessageContracts>false</GenerateMessageContracts>
+    <NamespaceMappings />
+    <CollectionMappings />
+    <GenerateSerializableTypes>true</GenerateSerializableTypes>
+    <Serializer>Auto</Serializer>
+    <UseSerializerForFaults>true</UseSerializerForFaults>
+    <ReferenceAllAssemblies>true</ReferenceAllAssemblies>
+    <ReferencedAssemblies />
+    <ReferencedDataContractTypes />
+    <ServiceContractMappings />
+  </ClientOptions>
+  <MetadataSources>
+    <MetadataSource Address="http://webstrar13.fulton.asu.edu/Page1/_weatherservice.svc?wsdl" Protocol="http" SourceId="1" />
+  </MetadataSources>
+  <Metadata>
+    <MetadataFile FileName="_weatherservice.xsd" MetadataType="Schema" ID="3c55609f-adf0-4f04-b72e-03b3fb97b319" SourceId="1" SourceUrl="http://webstrar13.fulton.asu.edu/Page1/_weatherservice.svc?xsd=xsd2" />
+    <MetadataFile FileName="_weatherservice1.xsd" MetadataType="Schema" ID="d287ba8c-3827-47d2-91ff-d441a2052587" SourceId="1" SourceUrl="http://webstrar13.fulton.asu.edu/Page1/_weatherservice.svc?xsd=xsd3" />
+    <MetadataFile FileName="_weatherservice.wsdl" MetadataType="Wsdl" ID="bf74ff62-295c-4f6e-80cf-33514c35c2dc" SourceId="1" SourceUrl="http://webstrar13.fulton.asu.edu/Page1/_weatherservice.svc?wsdl" />
+    <MetadataFile FileName="_weatherservice2.xsd" MetadataType="Schema" ID="c84564a2-8ad9-4bed-b886-9ed1efe6c248" SourceId="1" SourceUrl="http://webstrar13.fulton.asu.edu/Page1/_weatherservice.svc?xsd=xsd0" />
+    <MetadataFile FileName="_weatherservice3.xsd" MetadataType="Schema" ID="28d18a95-5d84-490e-8e6c-59f9e1e5a06d" SourceId="1" SourceUrl="http://webstrar13.fulton.asu.edu/Page1/_weatherservice.svc?xsd=xsd1" />
+  </Metadata>
+  <Extensions>
+    <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />
+    <ExtensionFile FileName="configuration.svcinfo" Name="configuration.svcinfo" />
+  </Extensions>
+</ReferenceGroup>

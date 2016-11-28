@@ -23,5 +23,30 @@ namespace Assignment5.Staff
                 UserNameLabel.Text = "Welcome back, " + Session["Username"].ToString();
             }
         }
+
+        protected void WeatherButton_Click(object sender, EventArgs e)
+        {
+            WeatherService.IWeatherService weatherService = new WeatherService.WeatherServiceClient();
+            string zipcode = WeatherZipCodeTextBox.Text;
+            string units = WeatherUnitsTextBox.Text;
+            string[] forcast= weatherService.getForcast(zipcode, units);
+            for(int i = 0; i != forcast.Length; i++)
+            {
+                ForcastLabel.Text +=  forcast[i] + "<br>";
+            }
+            LocationOutLabel.Text = weatherService.getLocation(zipcode);
+        }
+
+        protected void GetStoresButton(object sender, EventArgs e)
+        {
+            StoreLocationService.IStoreLocationService storelocationService = new StoreLocationService.StoreLocationServiceClient();
+            string term = SearchTermTextBox.Text;
+            string location = StoresLocationTextBox.Text;
+            string[] stores = storelocationService.QueryYelpAPI(term, location);
+            for (int i = 0; i != stores.Length; i++)
+            {
+
+            }
+        }
     }
 }
