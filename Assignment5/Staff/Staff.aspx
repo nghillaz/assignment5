@@ -3,9 +3,7 @@
   
     <div class="row">
         <div class="col-md-8">
-            <h2> Welcome to the Staff Page</h2>
-            <h3>
-                <asp:Label ID="UserNameLabel" runat="server" Text=""></asp:Label></h3>
+            <h2> Welcome to the Staff Page, <asp:Label ID="UsernameLabel" runat="server" Text=""></asp:Label></h2>
             <h5>You have access to the following tools!</h5>
         </div>
     </div>
@@ -81,5 +79,4 @@
             </p>
         </div>
     </div>
-
 </asp:Content>

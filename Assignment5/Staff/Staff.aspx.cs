@@ -12,7 +12,7 @@ namespace Assignment5.Staff
         protected void Page_Load(object sender, EventArgs e)
         {
             //user has no session, needs to login, send them to that page
-            if (Session["Sid"] == null || Session["isAdmin"] == null || Session["isAdmin"] != "true")
+            if (Session["Sid"] == null || Session["isAdmin"] == null || Session["isAdmin"].ToString() != "true")
             {
                 Response.Redirect("~/StaffLogin");
             }
@@ -20,7 +20,7 @@ namespace Assignment5.Staff
             //also display their username at the top of the page
             else
             {
-                UserNameLabel.Text = "Welcome back, " + Session["Username"].ToString();
+                UsernameLabel.Text = "Welcome back, " + Session["Username"].ToString();
             }
         }
 

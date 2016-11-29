@@ -13,13 +13,13 @@ namespace Assignment5.Staff {
     public partial class Staff {
         
         /// <summary>
-        /// UserNameLabel control.
+        /// UsernameLabel control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label UserNameLabel;
+        protected global::System.Web.UI.WebControls.Label UsernameLabel;
         
         /// <summary>
         /// WeatherZipCodeTextBox control.

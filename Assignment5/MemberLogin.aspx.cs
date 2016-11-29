@@ -52,6 +52,7 @@ namespace Assignment5.Member
                 {
                     Session["Username"] = UsernameTextBox.Text;
                     Session["Sid"] = Session.SessionID;
+                    Session["IsAdmin"] = "false";
                     Response.Redirect("Member/Member");
                 }
             }

@@ -22,8 +22,21 @@ namespace Assignment5.Member
             //also display their username at the top of the page
             else
             {
-                UserNameLabel.Text = "Welcome back, " + Session["Username"].ToString();
+                UsernameLabel.Text = "Welcome back, " + Session["Username"].ToString();
             }
+        }
+
+        protected void WeatherButton_Click(object sender, EventArgs e)
+        {
+            WeatherService.IWeatherService weatherService = new WeatherService.WeatherServiceClient();
+            string zipcode = WeatherZipCodeTextBox.Text;
+            string units = WeatherUnitsTextBox.Text;
+            string[] forcast = weatherService.getForcast(zipcode, units);
+            for (int i = 0; i != forcast.Length; i++)
+            {
+                ForcastLabel.Text += forcast[i] + "<br>";
+            }
+            LocationOutLabel.Text = weatherService.getLocation(zipcode);
         }
     }
 }
