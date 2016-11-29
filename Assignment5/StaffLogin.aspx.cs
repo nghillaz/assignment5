@@ -49,6 +49,19 @@ namespace Assignment5
                     && (staffList.Item(i).LastChild.InnerText 
                     == ZarateHash.HashFunction(StaffPasswordTextBox.Text).ToString()))
                 {
+                    //add username to cookies for easier logging in in the future
+                    if (Response.Cookies["UserData"] != null & Response.Cookies["UserData"]["Username"] != null)
+                    {
+                        Response.Cookies["UserData"]["Username"] = StaffUserNameTextBox.Text;
+                    }
+                    else
+                    {
+                        HttpCookie usernameCookie = new HttpCookie("UserData");
+                        usernameCookie["Username"] = StaffUserNameTextBox.Text;
+                        usernameCookie.Expires = DateTime.Now.AddDays(1d);
+                        Response.Cookies.Add(usernameCookie);
+                    }
+
                     Session["Username"] = StaffUserNameTextBox.Text;
                     Session["Sid"] = Session.SessionID;
                     Session["isAdmin"] = "true";

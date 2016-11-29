@@ -56,6 +56,19 @@ namespace Assignment5.Member
                     Response.Redirect("Member/Member");
                 }
             }
+
+            //add username to cookies for easier logging in in the future
+            if (Response.Cookies["UserData"] != null & Response.Cookies["UserData"]["Username"] != null)
+            {
+                Response.Cookies["UserData"]["Username"] = UsernameTextBox.Text;
+            }
+            else
+            {
+                HttpCookie usernameCookie = new HttpCookie("UserData");
+                usernameCookie["Username"] = UsernameTextBox.Text;
+                usernameCookie.Expires = DateTime.Now.AddDays(1d);
+                Response.Cookies.Add(usernameCookie);
+            }
         }
     }
 }
