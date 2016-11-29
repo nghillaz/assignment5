@@ -20,7 +20,7 @@ namespace Assignment5.Staff
             //also display their username at the top of the page
             else
             {
-                UsernameLabel.Text = "Welcome back, " + Session["Username"].ToString();
+                UsernameLabel.Text = Session["Username"].ToString();
             }
         }
 
