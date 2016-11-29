@@ -64,19 +64,4 @@
             </p>
         </div>
     </div>
-    <div class="row2">
-        <div class="col-mid-8">
-            <h4> Want to keep track of which stores you have visited.  Use the StoreCheckInService!</h4>
-             <p>               
-                Store Name: <asp:TextBox ID="StoreNameCheckInTextBox" runat="server"></asp:TextBox><br />
-                Store Location:  <asp:TextBox ID="StoreLocationCheckInTextBox" runat="server"></asp:TextBox><br />
-                <asp:Button ID="CheckInButton" runat="server" Text="CheckIn" OnClick="CheckInButton_Click" /><br />
-               
-                Lets see where you have been!! <br />
-                <asp:Button ID="ListStoresButton" runat="server" Text="List Stores" OnClick="ListStoresButton_Click" /><br />
-                Visited Stores are: <br />
-                <asp:Label ID="ListPlacesVisitedLabel" runat="server" Text=""></asp:Label>
-            </p>
-        </div>
-    </div>
 </asp:Content>
