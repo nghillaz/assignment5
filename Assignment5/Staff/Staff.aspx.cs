@@ -60,23 +60,5 @@ namespace Assignment5.Staff
                 RatingLabel.Text += ratings[i] + "<br>";
             }
         }
-
-        protected void CheckInButton_Click(object sender, EventArgs e)
-        {
-            StoreCheckInService.IStoreCheckInService checkInService = new StoreCheckInService.StoreCheckInServiceClient();
-            string storeName = StoreNameCheckInTextBox.Text;
-            string location = StoreLocationCheckInTextBox.Text;
-            checkInService.CheckInToStore(storeName, location);
-        }
-
-        protected void ListStoresButton_Click(object sender, EventArgs e)
-        {
-            StoreCheckInService.IStoreCheckInService checkInService = new StoreCheckInService.StoreCheckInServiceClient();
-            string[] places = checkInService.getListofStores();
-            for (int i = 0; i != places.Length; i++)
-            {
-                ListPlacesVisitedLabel.Text += places[i] + "<br>";
-            }
-        }
     }
 }

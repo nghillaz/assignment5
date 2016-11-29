@@ -257,16 +257,6 @@
     <Content Include="Default.aspx" />
     <Content Include="favicon.ico" />
     <Content Include="Global.asax" />
-    <None Include="Service References\StoreCheckInService\_StoreCheckInService.wsdl" />
-    <None Include="Service References\StoreCheckInService\_StoreCheckInService.xsd">
-      <SubType>Designer</SubType>
-    </None>
-    <None Include="Service References\StoreCheckInService\_StoreCheckInService1.xsd">
-      <SubType>Designer</SubType>
-    </None>
-    <None Include="Service References\StoreCheckInService\_StoreCheckInService2.xsd">
-      <SubType>Designer</SubType>
-    </None>
     <None Include="Service References\StoreLocationService\_StoreLocationService.wsdl" />
     <None Include="Service References\StoreLocationService\_StoreLocationService.xsd">
       <SubType>Designer</SubType>
@@ -302,12 +292,6 @@
     <None Include="Service References\StoreRatingService\configuration91.svcinfo" />
     <None Include="Service References\StoreRatingService\configuration.svcinfo" />
     <None Include="Service References\StoreRatingService\Reference.svcmap">
-      <Generator>WCF Proxy Generator</Generator>
-      <LastGenOutput>Reference.cs</LastGenOutput>
-    </None>
-    <None Include="Service References\StoreCheckInService\configuration91.svcinfo" />
-    <None Include="Service References\StoreCheckInService\configuration.svcinfo" />
-    <None Include="Service References\StoreCheckInService\Reference.svcmap">
       <Generator>WCF Proxy Generator</Generator>
       <LastGenOutput>Reference.cs</LastGenOutput>
     </None>
@@ -510,11 +494,6 @@
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
       <DependentUpon>Settings.settings</DependentUpon>
     </Compile>
-    <Compile Include="Service References\StoreCheckInService\Reference.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>Reference.svcmap</DependentUpon>
-    </Compile>
     <Compile Include="Service References\StoreLocationService\Reference.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -601,7 +580,6 @@
     </WebReferenceUrl>
   </ItemGroup>
   <ItemGroup>
-    <WCFMetadataStorage Include="Service References\StoreCheckInService\" />
     <WCFMetadataStorage Include="Service References\StoreLocationService\" />
     <WCFMetadataStorage Include="Service References\StoreRatingService\" />
     <WCFMetadataStorage Include="Service References\WeatherService\" />
