@@ -184,7 +184,6 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Content Include="About.aspx" />
     <Content Include="Account\AddPhoneNumber.aspx" />
     <Content Include="Account\Confirm.aspx" />
     <Content Include="Account\Forgot.aspx" />
@@ -200,7 +199,6 @@
     <Content Include="Account\ResetPasswordConfirmation.aspx" />
     <Content Include="Account\TwoFactorAuthenticationSignIn.aspx" />
     <Content Include="Account\VerifyPhoneNumber.aspx" />
-    <Content Include="Contact.aspx" />
     <Content Include="Content\bootstrap.css" />
     <Content Include="Content\bootstrap.min.css" />
     <Content Include="Content\Site.css" />
@@ -259,9 +257,6 @@
     <Content Include="Default.aspx" />
     <Content Include="favicon.ico" />
     <Content Include="Global.asax" />
-    <None Include="Service References\NaturalHazardsService\NaturalHazardsService.wsdl" />
-    <None Include="Service References\NewsFocusService\NewsFocusService.wsdl" />
-    <None Include="Service References\StorageService\Storage.wsdl" />
     <None Include="Service References\StoreCheckInService\_StoreCheckInService.wsdl" />
     <None Include="Service References\StoreCheckInService\_StoreCheckInService.xsd">
       <SubType>Designer</SubType>
@@ -313,24 +308,6 @@
     <None Include="Service References\StoreCheckInService\configuration91.svcinfo" />
     <None Include="Service References\StoreCheckInService\configuration.svcinfo" />
     <None Include="Service References\StoreCheckInService\Reference.svcmap">
-      <Generator>WCF Proxy Generator</Generator>
-      <LastGenOutput>Reference.cs</LastGenOutput>
-    </None>
-    <None Include="Service References\NaturalHazardsService\configuration91.svcinfo" />
-    <None Include="Service References\NaturalHazardsService\configuration.svcinfo" />
-    <None Include="Service References\NaturalHazardsService\Reference.svcmap">
-      <Generator>WCF Proxy Generator</Generator>
-      <LastGenOutput>Reference.cs</LastGenOutput>
-    </None>
-    <None Include="Service References\NewsFocusService\configuration91.svcinfo" />
-    <None Include="Service References\NewsFocusService\configuration.svcinfo" />
-    <None Include="Service References\NewsFocusService\Reference.svcmap">
-      <Generator>WCF Proxy Generator</Generator>
-      <LastGenOutput>Reference.cs</LastGenOutput>
-    </None>
-    <None Include="Service References\StorageService\configuration91.svcinfo" />
-    <None Include="Service References\StorageService\configuration.svcinfo" />
-    <None Include="Service References\StorageService\Reference.svcmap">
       <Generator>WCF Proxy Generator</Generator>
       <LastGenOutput>Reference.cs</LastGenOutput>
     </None>
@@ -492,23 +469,9 @@
       <DependentUpon>VerifyPhoneNumber.aspx</DependentUpon>
     </Compile>
     <Compile Include="App_Start\BundleConfig.cs" />
-    <Compile Include="About.aspx.cs">
-      <DependentUpon>About.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="About.aspx.designer.cs">
-      <DependentUpon>About.aspx</DependentUpon>
-    </Compile>
     <Compile Include="App_Start\IdentityConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="App_Start\Startup.Auth.cs" />
-    <Compile Include="Contact.aspx.cs">
-      <DependentUpon>Contact.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="Contact.aspx.designer.cs">
-      <DependentUpon>Contact.aspx</DependentUpon>
-    </Compile>
     <Compile Include="Default.aspx.cs">
       <DependentUpon>Default.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -546,21 +509,6 @@
       <AutoGen>True</AutoGen>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
       <DependentUpon>Settings.settings</DependentUpon>
-    </Compile>
-    <Compile Include="Service References\NaturalHazardsService\Reference.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>Reference.svcmap</DependentUpon>
-    </Compile>
-    <Compile Include="Service References\NewsFocusService\Reference.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>Reference.svcmap</DependentUpon>
-    </Compile>
-    <Compile Include="Service References\StorageService\Reference.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>Reference.svcmap</DependentUpon>
     </Compile>
     <Compile Include="Service References\StoreCheckInService\Reference.cs">
       <AutoGen>True</AutoGen>
@@ -653,9 +601,6 @@
     </WebReferenceUrl>
   </ItemGroup>
   <ItemGroup>
-    <WCFMetadataStorage Include="Service References\NaturalHazardsService\" />
-    <WCFMetadataStorage Include="Service References\NewsFocusService\" />
-    <WCFMetadataStorage Include="Service References\StorageService\" />
     <WCFMetadataStorage Include="Service References\StoreCheckInService\" />
     <WCFMetadataStorage Include="Service References\StoreLocationService\" />
     <WCFMetadataStorage Include="Service References\StoreRatingService\" />
