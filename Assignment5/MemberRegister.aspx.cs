@@ -28,7 +28,7 @@ namespace Assignment5.Member
         protected void RegisterButtonClick(object sender, EventArgs e)
         {
             //check image verifier
-            if(!Session["verifyString"].ToString().ToLower().Equals(ImageVerifierTextBox.Text.ToLower()))
+            if(Session["verifyString"] != null && !Session["verifyString"].ToString().ToLower().Equals(ImageVerifierTextBox.Text.ToLower()))
             {
                 StatusLabel.Text = "Image verification not correct";
                 StatusLabel.ForeColor = System.Drawing.Color.Red;
