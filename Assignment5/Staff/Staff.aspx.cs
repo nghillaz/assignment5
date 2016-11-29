@@ -23,5 +23,60 @@ namespace Assignment5.Staff
                 UserNameLabel.Text = "Welcome back, " + Session["Username"].ToString();
             }
         }
+
+        protected void WeatherButton_Click(object sender, EventArgs e)
+        {
+            WeatherService.IWeatherService weatherService = new WeatherService.WeatherServiceClient();
+            string zipcode = WeatherZipCodeTextBox.Text;
+            string units = WeatherUnitsTextBox.Text;
+            string[] forcast= weatherService.getForcast(zipcode, units);
+            for(int i = 0; i != forcast.Length; i++)
+            {
+                ForcastLabel.Text +=  forcast[i] + "<br>";
+            }
+            LocationOutLabel.Text = weatherService.getLocation(zipcode);
+        }
+
+        protected void GetStoresButton(object sender, EventArgs e)
+        {
+            StoreLocationService.IStoreLocationService storelocationService = new StoreLocationService.StoreLocationServiceClient();
+            string term = SearchTermTextBox.Text;
+            string location = StoresLocationTextBox.Text;
+            string[] stores = storelocationService.QueryYelpAPI(term, location);
+            for (int i = 0; i != stores.Length; i++)
+            {
+                LocalStoresOutputLabel.Text += stores[i] + "<br>";
+            }
+        }
+
+        protected void RatingButton_Click(object sender, EventArgs e)
+        {
+            StoreRatingService.IStoreRatingService storeRatingService = new StoreRatingService.StoreRatingServiceClient();
+            string storeName = StoreNameRatingTextBox.Text;
+            string storeLocation = StoreLocationRatingTextBox.Text;
+            string[] ratings = storeRatingService.QueryYelpAPI(storeName, storeLocation);
+            for (int i = 0; i != ratings.Length; i++)
+            {
+                RatingLabel.Text += ratings[i] + "<br>";
+            }
+        }
+
+        protected void CheckInButton_Click(object sender, EventArgs e)
+        {
+            StoreCheckInService.IStoreCheckInService checkInService = new StoreCheckInService.StoreCheckInServiceClient();
+            string storeName = StoreNameCheckInTextBox.Text;
+            string location = StoreLocationCheckInTextBox.Text;
+            checkInService.CheckInToStore(storeName, location);
+        }
+
+        protected void ListStoresButton_Click(object sender, EventArgs e)
+        {
+            StoreCheckInService.IStoreCheckInService checkInService = new StoreCheckInService.StoreCheckInServiceClient();
+            string[] places = checkInService.getListofStores();
+            for (int i = 0; i != places.Length; i++)
+            {
+                ListPlacesVisitedLabel.Text += places[i] + "<br>";
+            }
+        }
     }
 }

@@ -81,6 +81,8 @@
     <Reference Include="System.Data" />
     <Reference Include="System.Core" />
     <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.ServiceModel" />
     <Reference Include="System.Web.Extensions" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Drawing" />
@@ -257,6 +259,60 @@
     <Content Include="Default.aspx" />
     <Content Include="favicon.ico" />
     <Content Include="Global.asax" />
+    <None Include="Service References\StoreCheckInService\_StoreCheckInService.wsdl" />
+    <None Include="Service References\StoreCheckInService\_StoreCheckInService.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\StoreCheckInService\_StoreCheckInService1.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\StoreCheckInService\_StoreCheckInService2.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\StoreLocationService\_StoreLocationService.wsdl" />
+    <None Include="Service References\StoreLocationService\_StoreLocationService.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\StoreLocationService\_StoreLocationService1.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\StoreLocationService\_StoreLocationService2.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\StoreRatingService\StoreRatingService.wsdl" />
+    <None Include="Service References\StoreRatingService\StoreRatingService.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\StoreRatingService\StoreRatingService1.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\StoreRatingService\StoreRatingService2.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\WeatherService\configuration91.svcinfo" />
+    <None Include="Service References\WeatherService\configuration.svcinfo" />
+    <None Include="Service References\WeatherService\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <None Include="Service References\StoreLocationService\configuration91.svcinfo" />
+    <None Include="Service References\StoreLocationService\configuration.svcinfo" />
+    <None Include="Service References\StoreLocationService\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <None Include="Service References\StoreRatingService\configuration91.svcinfo" />
+    <None Include="Service References\StoreRatingService\configuration.svcinfo" />
+    <None Include="Service References\StoreRatingService\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <None Include="Service References\StoreCheckInService\configuration91.svcinfo" />
+    <None Include="Service References\StoreCheckInService\configuration.svcinfo" />
+    <None Include="Service References\StoreCheckInService\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
     <Content Include="Site.Master" />
     <Content Include="StaffLogin.aspx" />
     <Content Include="Staff\Staff.aspx" />
@@ -268,6 +324,19 @@
     <Content Include="Scripts\jquery-1.10.2.min.map" />
     <Content Include="Site.Mobile.Master" />
     <Content Include="Staff\Web.config" />
+    <None Include="Service References\WeatherService\_weatherservice.wsdl" />
+    <None Include="Service References\WeatherService\_weatherservice.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\WeatherService\_weatherservice1.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\WeatherService\_weatherservice2.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\WeatherService\_weatherservice3.xsd">
+      <SubType>Designer</SubType>
+    </None>
     <None Include="Staff\Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
@@ -457,6 +526,26 @@
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
       <DependentUpon>Settings.settings</DependentUpon>
     </Compile>
+    <Compile Include="Service References\StoreCheckInService\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="Service References\StoreLocationService\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="Service References\StoreRatingService\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="Service References\WeatherService\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
     <Compile Include="Site.Master.cs">
       <DependentUpon>Site.Master</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -526,6 +615,12 @@
       <CachedAppSettingsObjectName>Settings</CachedAppSettingsObjectName>
       <CachedSettingsPropName>Assignment5_ImageVerifierService_Service</CachedSettingsPropName>
     </WebReferenceUrl>
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadataStorage Include="Service References\StoreCheckInService\" />
+    <WCFMetadataStorage Include="Service References\StoreLocationService\" />
+    <WCFMetadataStorage Include="Service References\StoreRatingService\" />
+    <WCFMetadataStorage Include="Service References\WeatherService\" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
